@@ -132,7 +132,7 @@ public class PromotionMaster {
 			   
 		Thread.sleep(3000);	   
 		driver.findElement(By.id("ctl00_CP_ContentPage_chkShowToCustomer")).click();
-		driver.findElement(By.xpath("//input[@id='ctl00_CP_ContentPage_txtTitle']")).sendKeys("Aj-Test-Code");
+		driver.findElement(By.xpath("//input[@id='ctl00_CP_ContentPage_txtTitle']")).sendKeys("Jp-Test-Code");
 		driver.findElement(By.id("ctl00_CP_ContentPage_btn_Submit")).click();
 			   
 			   

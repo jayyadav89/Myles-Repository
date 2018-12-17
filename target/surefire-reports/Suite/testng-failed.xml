@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Suite]">
   <test name="Test(failed)">
     <classes>
-      <class name="MylesBooking.MylesBooking_Scripts">
+      <class name="Insta.InstaScripts">
         <methods>
-          <include name="fn_MylesCancelBooking"/>
-          <include name="TearDown"/>
           <include name="ExtentReportGen"/>
+          <include name="TearDown"/>
+          <include name="fn_DSClose"/>
         </methods>
-      </class> <!-- MylesBooking.MylesBooking_Scripts -->
+      </class> <!-- Insta.InstaScripts -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

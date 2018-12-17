@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Oct 25 12:41:16 IST 2018</td>
+<td>Started on:</td><td>Mon Dec 17 15:13:28 IST 2018</td>
 </tr>
-<tr><td>Total time:</td><td>22 seconds (22427 ms)</td>
+<tr><td>Total time:</td><td>25 seconds (25925 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,12 +75,12 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='MylesBooking.MylesBooking_Scripts.TearDown()'><b>TearDown</b><br>Test class: MylesBooking.MylesBooking_Scripts<br>Parameters: [TestResult name=fn_MylesCancelBooking status=FAILURE method=MylesBooking_Scripts.fn_MylesCancelBooking()[pri:2, instance:MylesBooking.MylesBooking_Scripts@50f8360d] output={null}]</td>
+<td title='Insta.InstaScripts.TearDown()'><b>TearDown</b><br>Test class: Insta.InstaScripts<br>Parameters: [TestResult name=fn_DSClose status=FAILURE method=InstaScripts.fn_DSClose()[pri:5, instance:Insta.InstaScripts@13a57a3b] output={null}]</td>
 <td><div><pre>java.lang.NullPointerException
-	at MylesBooking.MylesBooking_Scripts.TearDown(MylesBooking_Scripts.java:88)
-... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace323823279", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace323823279'><pre>java.lang.NullPointerException
-	at MylesBooking.MylesBooking_Scripts.TearDown(MylesBooking_Scripts.java:88)
+	at Insta.InstaScripts.TearDown(InstaScripts.java:150)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1940055334", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1940055334'><pre>java.lang.NullPointerException
+	at Insta.InstaScripts.TearDown(InstaScripts.java:150)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -112,7 +112,7 @@ function toggleAllBoxes() {
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
 </pre></div></td>
 <td>0</td>
-<td>MylesBooking.MylesBooking_Scripts@50f8360d</td></tr>
+<td>Insta.InstaScripts@13a57a3b</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-failed'>
 <tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
@@ -122,44 +122,14 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='MylesBooking.MylesBooking_Scripts.fn_MylesCancelBooking()'><b>fn_MylesCancelBooking</b><br>Test class: MylesBooking.MylesBooking_Scripts</td>
-<td><div><pre>org.openqa.selenium.NoAlertPresentException: no such alert
-  (Session info: chrome=69.0.3497.100)
-  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 14 milliseconds
-Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
-System info: host: &apos;AMIT-PC&apos;, ip: &apos;192.168.2.110&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab), userDataDir=C:\Users\JAY~1.YAD\AppData\Local\Temp\scoped_dir208_14914}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=69.0.3497.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: 579da1c0131a7b2de1430d9b64f4112d
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:701)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:1049)
-	at MylesBooking.BookingInMyles.MylesCancelBooking(BookingInMyles.java:361)
-	at MylesBooking.MylesBooking_Scripts.fn_MylesCancelBooking(MylesBooking_Scripts.java:62)
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1280429864", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1280429864'><pre>org.openqa.selenium.NoAlertPresentException: no such alert
-  (Session info: chrome=69.0.3497.100)
-  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 14 milliseconds
-Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
-System info: host: &apos;AMIT-PC&apos;, ip: &apos;192.168.2.110&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab), userDataDir=C:\Users\JAY~1.YAD\AppData\Local\Temp\scoped_dir208_14914}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=69.0.3497.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: 579da1c0131a7b2de1430d9b64f4112d
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:701)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:1049)
-	at MylesBooking.BookingInMyles.MylesCancelBooking(BookingInMyles.java:361)
-	at MylesBooking.MylesBooking_Scripts.fn_MylesCancelBooking(MylesBooking_Scripts.java:62)
+<td title='Insta.InstaScripts.fn_DSClose()'><b>fn_DSClose</b><br>Test class: Insta.InstaScripts</td>
+<td><div><pre>java.lang.NullPointerException
+	at Insta.Insta.DSClose(Insta.java:861)
+	at Insta.InstaScripts.fn_DSClose(InstaScripts.java:109)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace249177573", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace249177573'><pre>java.lang.NullPointerException
+	at Insta.Insta.DSClose(Insta.java:861)
+	at Insta.InstaScripts.fn_DSClose(InstaScripts.java:109)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -188,8 +158,8 @@ Session ID: 579da1c0131a7b2de1430d9b64f4112d
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
 </pre></div></td>
-<td>22</td>
-<td>MylesBooking.MylesBooking_Scripts@50f8360d</td></tr>
+<td>25</td>
+<td>Insta.InstaScripts@13a57a3b</td></tr>
 </table><p>
 </body>
 </html>

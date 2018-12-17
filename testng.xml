@@ -3,8 +3,10 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="MylesBooking.MylesBooking_Scripts"/>
-<!--  <class name="com.myles.generic.pkg.ExtentReport"/> -->
+<!--       <class name="MylesBooking.MylesBooking_Scripts"/> -->
+           <class name="Insta.InstaScripts"/> 
+<!--       <class name="Explore.ExploreScripts"/> -->
+
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

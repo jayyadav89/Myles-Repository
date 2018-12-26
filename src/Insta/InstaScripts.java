@@ -3,15 +3,21 @@ package Insta;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import MylesBooking.BookingInMyles;
@@ -31,9 +37,33 @@ public class InstaScripts extends Generic_Methods{
 	
 	@BeforeTest
 	public void ExtentReportGen(){
-//	  report=new ExtentReports("D:\\Myles Framework\\Automation Result\\MylesBooking.html");
-		report=new ExtentReports("C:\\Users\\jay.yadav\\Downloads\\Myles\\test-output\\Extent Report\\InstaBooking.html");
+     report=new ExtentReports("D:\\Myles Framework\\Automation Result\\InstaBooking.html");
 	}
+	
+	
+	@BeforeMethod(alwaysRun = true)
+	@Parameters("browser")
+      public void setup(String browser) throws IOException, InterruptedException {
+       //Check if parameter passed from TestNG is 'firefox'
+         if(browser.equalsIgnoreCase("Firefox")){
+        	 driver = new FirefoxDriver();
+        	 driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
+     		 driver.manage().window().maximize();
+        }
+	       else if(browser.equalsIgnoreCase("chrome")){
+			  System.setProperty("webdriver.chrome.driver", "./ExeFolder/chromedriver.exe");
+			  driver=new ChromeDriver();
+			  driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
+			  driver.manage().window().maximize();
+         }
+           else if(browser.equalsIgnoreCase("IE")){
+ 			  System.setProperty("webdriver.ie.driver", "drivers\\IEDriverServer.exe");
+ 			  driver=new InternetExplorerDriver();
+ 			  driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
+ 			  driver.manage().window().maximize();
+         }
+	    }
+	
 	
 	
 	
@@ -98,7 +128,7 @@ public class InstaScripts extends Generic_Methods{
 	
 	
 	
-	@Test(priority=5,enabled=true)
+	@Test(priority=5,enabled=false)
 	public void fn_DSClose() throws IOException, InterruptedException, EncryptedDocumentException, InvalidFormatException{
 		logger=report.startTest("DS Close");
 		try{
@@ -119,11 +149,6 @@ public class InstaScripts extends Generic_Methods{
 	
 	
 	
-	
-	
-	
-	
-	
 	@Test(priority=5,enabled=false)
 	public void fn_PromotionMaster() throws IOException, InterruptedException, EncryptedDocumentException, InvalidFormatException{
 		logger=report.startTest("Promotion Master");
@@ -135,6 +160,26 @@ public class InstaScripts extends Generic_Methods{
 			logger.log(LogStatus.INFO, "Promotion not created successfully: Failed");
 			}
 	       }
+	
+	
+	
+	
+//	@Test(priority=6,enabled=true)
+	public void fn_Extension() throws IOException, InterruptedException, EncryptedDocumentException, InvalidFormatException{
+		logger=report.startTest("Extension");
+		try{
+			bookingmyles.MylesBooking2();
+			Thread.sleep(2000);
+			insta.DSOpen();
+			Thread.sleep(2000);
+			insta.Extension();
+			logger.log(LogStatus.INFO, "Extension successfully");
+		 }
+		 catch(FileNotFoundException e){
+			logger.log(LogStatus.INFO, "Extension not successfully: Failed");
+			}
+	       }
+	
 	
 	
 	

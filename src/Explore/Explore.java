@@ -22,14 +22,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.myles.generic.pkg.Generic_Methods;
 
-public class CarSwap extends Generic_Methods{
+public class Explore extends Generic_Methods{
 	
 	
 	public void CarSwap() throws InterruptedException, EncryptedDocumentException, InvalidFormatException, FileNotFoundException, IOException {
-		System.setProperty("webdriver.chrome.driver", "./ExeFolder/chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+//		System.setProperty("webdriver.chrome.driver", "./ExeFolder/chromedriver.exe");
+//		WebDriver driver = new ChromeDriver();
+//		driver.manage().window().maximize();
+//		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.get("http://10.90.90.32:8443/");
 		Workbook wb = WorkbookFactory.create(new FileInputStream(new File("./Myles.xlsx"))); 
 		String userName = wb.getSheet("Swap-Car").getRow(1).getCell(1).getStringCellValue();
@@ -102,10 +102,10 @@ public class CarSwap extends Generic_Methods{
 	
 	
 	public void ExploreCancel() throws InterruptedException, EncryptedDocumentException, InvalidFormatException, FileNotFoundException, IOException {
-		System.setProperty("webdriver.chrome.driver", "./ExeFolder/chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+//		System.setProperty("webdriver.chrome.driver", "./ExeFolder/chromedriver.exe");
+//		WebDriver driver = new ChromeDriver();
+//		driver.manage().window().maximize();
+//		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.get("http://10.90.90.32:8443/");
 		Workbook wb = WorkbookFactory.create(new FileInputStream(new File("./Myles.xlsx"))); 
 		String userName = wb.getSheet("Swap-Car").getRow(1).getCell(1).getStringCellValue();

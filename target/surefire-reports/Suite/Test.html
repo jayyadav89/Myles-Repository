@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Dec 17 15:13:28 IST 2018</td>
+<td>Started on:</td><td>Wed Dec 26 12:15:54 IST 2018</td>
 </tr>
-<tr><td>Total time:</td><td>25 seconds (25925 ms)</td>
+<tr><td>Total time:</td><td>169 seconds (169154 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,12 +75,12 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Insta.InstaScripts.TearDown()'><b>TearDown</b><br>Test class: Insta.InstaScripts<br>Parameters: [TestResult name=fn_DSClose status=FAILURE method=InstaScripts.fn_DSClose()[pri:5, instance:Insta.InstaScripts@13a57a3b] output={null}]</td>
+<td title='MylesBooking.MylesBooking_Scripts.TearDown()'><b>TearDown</b><br>Test class: MylesBooking.MylesBooking_Scripts<br>Parameters: [TestResult name=fn_MylesBooking3 status=FAILURE method=MylesBooking_Scripts.fn_MylesBooking3()[pri:1, instance:MylesBooking.MylesBooking_Scripts@13a57a3b] output={null}]</td>
 <td><div><pre>java.lang.NullPointerException
-	at Insta.InstaScripts.TearDown(InstaScripts.java:150)
-... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1940055334", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1940055334'><pre>java.lang.NullPointerException
-	at Insta.InstaScripts.TearDown(InstaScripts.java:150)
+	at MylesBooking.MylesBooking_Scripts.TearDown(MylesBooking_Scripts.java:142)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace415565467", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace415565467'><pre>java.lang.NullPointerException
+	at MylesBooking.MylesBooking_Scripts.TearDown(MylesBooking_Scripts.java:142)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -112,7 +112,7 @@ function toggleAllBoxes() {
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
 </pre></div></td>
 <td>0</td>
-<td>Insta.InstaScripts@13a57a3b</td></tr>
+<td>MylesBooking.MylesBooking_Scripts@13a57a3b</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-failed'>
 <tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
@@ -122,14 +122,46 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Insta.InstaScripts.fn_DSClose()'><b>fn_DSClose</b><br>Test class: Insta.InstaScripts</td>
-<td><div><pre>java.lang.NullPointerException
-	at Insta.Insta.DSClose(Insta.java:861)
-	at Insta.InstaScripts.fn_DSClose(InstaScripts.java:109)
-... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace249177573", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace249177573'><pre>java.lang.NullPointerException
-	at Insta.Insta.DSClose(Insta.java:861)
-	at Insta.InstaScripts.fn_DSClose(InstaScripts.java:109)
+<td title='MylesBooking.MylesBooking_Scripts.fn_MylesBooking3()'><b>fn_MylesBooking3</b><br>Test class: MylesBooking.MylesBooking_Scripts</td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=71.0.3578.98)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 12 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;AMIT-PC&apos;, ip: &apos;192.168.2.161&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab), userDataDir=C:\Users\JAY~1.YAD\AppData\Local\Temp\scoped_dir13268_19155}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=71.0.3578.98, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 18324aa1c4d8e26ffa8d3577715202c4
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:122)
+	at MylesBooking.BookingInMyles.MylesBooking3(BookingInMyles.java:2225)
+	at MylesBooking.MylesBooking_Scripts.fn_MylesBooking3(MylesBooking_Scripts.java:123)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1577167234", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1577167234'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=71.0.3578.98)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 12 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;AMIT-PC&apos;, ip: &apos;192.168.2.161&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab), userDataDir=C:\Users\JAY~1.YAD\AppData\Local\Temp\scoped_dir13268_19155}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=71.0.3578.98, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 18324aa1c4d8e26ffa8d3577715202c4
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:122)
+	at MylesBooking.BookingInMyles.MylesBooking3(BookingInMyles.java:2225)
+	at MylesBooking.MylesBooking_Scripts.fn_MylesBooking3(MylesBooking_Scripts.java:123)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -158,8 +190,8 @@ function toggleAllBoxes() {
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
 </pre></div></td>
-<td>25</td>
-<td>Insta.InstaScripts@13a57a3b</td></tr>
+<td>169</td>
+<td>MylesBooking.MylesBooking_Scripts@13a57a3b</td></tr>
 </table><p>
 </body>
 </html>

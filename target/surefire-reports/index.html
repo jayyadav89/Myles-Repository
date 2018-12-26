@@ -101,7 +101,7 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Insta.InstaScripts" hash-for-method="fn_DSClose">fn_DSClose</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="MylesBooking.MylesBooking_Scripts" hash-for-method="fn_MylesBooking3">fn_MylesBooking3</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -119,18 +119,32 @@
           <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">Insta.InstaScripts</span>
+              <span class="class-name">MylesBooking.MylesBooking_Scripts</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="fn_DSClose">
-                  </a> <!-- fn_DSClose -->
-                  <span class="method-name">fn_DSClose</span>
-                  <div class="stack-trace">java.lang.NullPointerException
-	at Insta.Insta.DSClose(Insta.java:861)
-	at Insta.InstaScripts.fn_DSClose(InstaScripts.java:109)
-... Removed 27 stack frames
+                  <a name="fn_MylesBooking3">
+                  </a> <!-- fn_MylesBooking3 -->
+                  <span class="method-name">fn_MylesBooking3</span>
+                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=71.0.3578.98)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 9 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;AMIT-PC&apos;, ip: &apos;192.168.2.161&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab), userDataDir=C:\Users\JAY~1.YAD\AppData\Local\Temp\scoped_dir5356_32671}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=71.0.3578.98, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: a25bd00b6423e6ada9377b27d9d4b358
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:122)
+	at MylesBooking.BookingInMyles.MylesBooking3(BookingInMyles.java:2222)
+	at MylesBooking.MylesBooking_Scripts.fn_MylesBooking3(MylesBooking_Scripts.java:145)
+... Removed 31 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -146,11 +160,12 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot; name=&quot;Suite&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
+  &lt;test name=&quot;Test on Chrome&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;Insta.InstaScripts&quot;/&gt;
+      &lt;class name=&quot;MylesBooking.MylesBooking_Scripts&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test --&gt;
+  &lt;/test&gt; &lt;!-- Test on Chrome --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -162,7 +177,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (1 class)</span>
+                <span class="test-name">Test on Chrome (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -190,14 +205,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'fn_DSClose')
-data.setCell(0, 2, 'Insta.InstaScripts')
-data.setCell(0, 3, 25816);
+data.setCell(0, 1, 'fn_MylesBooking3')
+data.setCell(0, 2, 'MylesBooking.MylesBooking_Scripts')
+data.setCell(0, 3, 153232);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 25 seconds</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -212,21 +227,17 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">5 ignored methods</span>
+            <span class="header-content">3 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">Insta.InstaScripts</span>
+              <span class="ignored-class-name">MylesBooking.MylesBooking_Scripts</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">fn_DamageInvoice</span>
+                <span class="ignored-method-name">fn_MylesExtension</span>
                 <br/>
-                <span class="ignored-method-name">fn_InstaExtension</span>
+                <span class="ignored-method-name">fn_MylesCancelBooking</span>
                 <br/>
-                <span class="ignored-method-name">fn_InstaBooking</span>
-                <br/>
-                <span class="ignored-method-name">fn_DSOpen</span>
-                <br/>
-                <span class="ignored-method-name">fn_PromotionMaster</span>
+                <span class="ignored-method-name">fn_MylesBooking</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -238,22 +249,24 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">Insta.InstaScripts</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">MylesBooking.MylesBooking_Scripts</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">ExtentReportGen</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(chrome)</span>
+                <span class="method-start">79 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">fn_DSClose</span>
-                <span class="method-start">89 ms</span>
+                <span class="method-name">fn_MylesBooking3</span>
+                <span class="method-start">2683 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">TearDown([TestResult name=fn_DSClose status=FAILURE method=InstaScripts.fn_DSClose()[pri:5, instance:Insta.In...)</span>
-                <span class="method-start">25920 ms</span>
+                <span class="method-name">TearDown([TestResult name=fn_MylesBooking3 status=FAILURE method=MylesBooking_Scripts.fn_MylesBooking3()[pri:...)</span>
+                <span class="method-start">155931 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

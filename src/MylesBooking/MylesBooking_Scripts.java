@@ -3,17 +3,22 @@ package MylesBooking;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import Insta.Insta;
@@ -33,15 +38,32 @@ public class MylesBooking_Scripts extends Generic_Methods{
 	
 	@BeforeTest
 	public void ExtentReportGen(){
-//	  report=new ExtentReports("D:\\Myles Framework\\Automation Result\\MylesBooking.html");
-		report=new ExtentReports("C:\\Users\\jay.yadav\\Downloads\\Myles\\test-output\\Extent Report\\MylesBooking.html");
+	  report=new ExtentReports("D:\\Myles Framework\\Automation Result\\MylesBooking.html");
+//		report=new ExtentReports("C:\\Users\\jay.yadav\\Downloads\\Myles\\test-output\\Extent Report\\MylesBooking.html");
 	}
 	
-	
-//	@BeforeMethod
-//	public void fn_SignIn() throws InvalidFormatException, FileNotFoundException, InterruptedException, IOException{
-//		bookingmyles.SignIn();
-//	}
+	@BeforeMethod(alwaysRun = true)
+	@Parameters("browser")
+      public void setup(String browser) throws IOException, InterruptedException {
+       //Check if parameter passed from TestNG is 'firefox'
+         if(browser.equalsIgnoreCase("Firefox")){
+        	 driver = new FirefoxDriver();
+        	 driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
+     		 driver.manage().window().maximize();
+        }
+	       else if(browser.equalsIgnoreCase("chrome")){
+			  System.setProperty("webdriver.chrome.driver", "./ExeFolder/chromedriver.exe");
+			  driver=new ChromeDriver();
+			  driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
+			  driver.manage().window().maximize();
+         }
+           else if(browser.equalsIgnoreCase("IE")){
+ 			  System.setProperty("webdriver.ie.driver", "drivers\\IEDriverServer.exe");
+ 			  driver=new InternetExplorerDriver();
+ 			  driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
+ 			  driver.manage().window().maximize();
+         }
+	    }
 	
 	
 	
@@ -73,7 +95,7 @@ public class MylesBooking_Scripts extends Generic_Methods{
 	
 	
 	
-	@Test(priority=3,enabled=true)
+	@Test(priority=3,enabled=false)
 	public void fn_MylesExtension() throws IOException, InterruptedException, EncryptedDocumentException, InvalidFormatException{
 		logger=report.startTest("MylesExtension");
 		try{
@@ -93,29 +115,38 @@ public class MylesBooking_Scripts extends Generic_Methods{
 	
 	
 	
-//	@Test(priority=3,enabled=true)
-	public void fn_InstaBooking() throws IOException, InterruptedException, EncryptedDocumentException, InvalidFormatException{
-		logger=report.startTest("InstaBooking");
-		try{
-			insta.InstaBooking();
-			logger.log(LogStatus.INFO, "Insta booking created successfully");
-		 }
-		 catch(FileNotFoundException e){
-			logger.log(LogStatus.INFO, "Insta booking not created: Failed");
-			}
-	       }
 	
 	
 	
 //	@Test(priority=4,enabled=true)
-	public void fn_DSOpen() throws IOException, InterruptedException, EncryptedDocumentException, InvalidFormatException{
-		logger=report.startTest("DS Open");
+	public void fn_MylesExtension1() throws IOException, InterruptedException, EncryptedDocumentException, InvalidFormatException{
+		logger=report.startTest("MylesExtension");
 		try{
-			insta.DSOpen();
-			logger.log(LogStatus.INFO, "DS Opened successfully");
+//			bookingmyles.MylesBooking2();
+//			Thread.sleep(2000);
+//			insta.DSOpen();
+//			Thread.sleep(2000);
+			bookingmyles.MylesExtension1();
+			logger.log(LogStatus.INFO, "Myles booking extension done successfully");
 		 }
 		 catch(FileNotFoundException e){
-			logger.log(LogStatus.INFO, "DS not Opened: Failed");
+			logger.log(LogStatus.INFO, "Myles booking extension not done: Failed");
+			}
+	       }
+	
+	
+	
+	
+	
+	@Test(priority=1,enabled=true)
+	public void fn_MylesBooking3() throws IOException, InterruptedException, EncryptedDocumentException, InvalidFormatException{
+		logger=report.startTest("MylesBooking");
+		try{
+			bookingmyles.MylesBooking3();
+			logger.log(LogStatus.INFO, "Myles booking done successfully");
+		 }
+		 catch(FileNotFoundException e){
+			logger.log(LogStatus.INFO, "Myles booking: Failed");
 			}
 	       }
 	
@@ -125,8 +156,7 @@ public class MylesBooking_Scripts extends Generic_Methods{
 	
 	
 	
-	
-	
+
 	
 	@AfterMethod(alwaysRun= true)
 	public void TearDown(ITestResult result) throws IOException, InterruptedException{

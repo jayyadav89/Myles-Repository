@@ -3,15 +3,21 @@ package Explore;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import Insta.Insta;
@@ -29,12 +35,40 @@ public class ExploreScripts extends Generic_Methods{
 	
 	BookingInMyles bookingmyles=new BookingInMyles();
 	Insta insta=new Insta();
-	CarSwap explore=new CarSwap();
+	Explore explore=new Explore();
 	@BeforeTest
 	public void ExtentReportGen(){
 //	  report=new ExtentReports("D:\\Myles Framework\\Automation Result\\MylesBooking.html");
-		report=new ExtentReports("C:\\Users\\jay.yadav\\Downloads\\Myles\\test-output\\Extent Report\\Explore.html");
+		report=new ExtentReports("D:\\Myles Framework\\Automation Result\\Explore.html");
 	}
+	
+	
+	
+	@BeforeMethod(alwaysRun = true)
+	@Parameters("browser")
+      public void setup(String browser) throws IOException, InterruptedException {
+       //Check if parameter passed from TestNG is 'firefox'
+         if(browser.equalsIgnoreCase("Firefox")){
+        	 driver = new FirefoxDriver();
+        	 driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
+     		 driver.manage().window().maximize();
+        }
+	       else if(browser.equalsIgnoreCase("chrome")){
+			  System.setProperty("webdriver.chrome.driver", "./ExeFolder/chromedriver.exe");
+			  driver=new ChromeDriver();
+			  driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
+			  driver.manage().window().maximize();
+         }
+           else if(browser.equalsIgnoreCase("IE")){
+ 			  System.setProperty("webdriver.ie.driver", "drivers\\IEDriverServer.exe");
+ 			  driver=new InternetExplorerDriver();
+ 			  driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
+ 			  driver.manage().window().maximize();
+         }
+	    }
+	
+	
+	
 	
 	
 	

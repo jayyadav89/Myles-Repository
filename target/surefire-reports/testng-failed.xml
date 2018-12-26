@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Suite]">
-  <test name="Test(failed)">
+  <parameter name="browser" value="chrome"/>
+  <test name="Test on Chrome(failed)">
+    <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="Insta.InstaScripts">
+      <class name="MylesBooking.MylesBooking_Scripts">
         <methods>
-          <include name="ExtentReportGen"/>
           <include name="TearDown"/>
-          <include name="fn_DSClose"/>
+          <include name="fn_MylesBooking3"/>
+          <include name="setup"/>
+          <include name="ExtentReportGen"/>
         </methods>
-      </class> <!-- Insta.InstaScripts -->
+      </class> <!-- MylesBooking.MylesBooking_Scripts -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- Test on Chrome(failed) -->
 </suite> <!-- Failed suite [Suite] -->

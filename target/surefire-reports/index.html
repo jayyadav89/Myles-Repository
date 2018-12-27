@@ -130,20 +130,20 @@
                   <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
   (Session info: chrome=71.0.3578.98)
   (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 9 milliseconds
+Command duration or timeout: 16 milliseconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
 System info: host: &apos;AMIT-PC&apos;, ip: &apos;192.168.2.161&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab), userDataDir=C:\Users\JAY~1.YAD\AppData\Local\Temp\scoped_dir5356_32671}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=71.0.3578.98, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: a25bd00b6423e6ada9377b27d9d4b358
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab), userDataDir=C:\Users\JAY~1.YAD\AppData\Local\Temp\scoped_dir12504_24057}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=71.0.3578.98, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 2db4a1a142df40b034c5acf6573e3329
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
 	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:122)
-	at MylesBooking.BookingInMyles.MylesBooking3(BookingInMyles.java:2222)
-	at MylesBooking.MylesBooking_Scripts.fn_MylesBooking3(MylesBooking_Scripts.java:145)
+	at MylesBooking.BookingInMyles.MylesBooking4(BookingInMyles.java:2485)
+	at MylesBooking.MylesBooking_Scripts.fn_MylesBooking3(MylesBooking_Scripts.java:146)
 ... Removed 31 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
@@ -207,12 +207,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'fn_MylesBooking3')
 data.setCell(0, 2, 'MylesBooking.MylesBooking_Scripts')
-data.setCell(0, 3, 153232);
+data.setCell(0, 3, 95301);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -233,9 +233,9 @@ return data;
             <div class="ignored-class-div">
               <span class="ignored-class-name">MylesBooking.MylesBooking_Scripts</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">fn_MylesExtension</span>
-                <br/>
                 <span class="ignored-method-name">fn_MylesCancelBooking</span>
+                <br/>
+                <span class="ignored-method-name">fn_MylesExtension</span>
                 <br/>
                 <span class="ignored-method-name">fn_MylesBooking</span>
                 <br/>
@@ -256,17 +256,17 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
                 <span class="method-name">setup(chrome)</span>
-                <span class="method-start">79 ms</span>
+                <span class="method-start">94 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">fn_MylesBooking3</span>
-                <span class="method-start">2683 ms</span>
+                <span class="method-start">2602 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">TearDown([TestResult name=fn_MylesBooking3 status=FAILURE method=MylesBooking_Scripts.fn_MylesBooking3()[pri:...)</span>
-                <span class="method-start">155931 ms</span>
+                <span class="method-start">97919 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
